@@ -1,0 +1,55 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "HR_RESP API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/dep/": {
+            "get": {
+                "operationId": "9d0bdc269a3932b16657dd08b7ef725a",
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of departments."
+                    }
+                }
+            }
+        },
+        "/api/dep/{id}": {
+            "get": {
+                "operationId": "6be76b942ac889e58fb7de0ab352d758",
+                "responses": {
+                    "200": {
+                        "description": "Display department by id."
+                    }
+                }
+            },
+            "put": {
+                "operationId": "301b8ebd5d39b5ae9d1a25353a185289",
+                "responses": {
+                    "200": {
+                        "description": "Update department`s value."
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "84c294c1a7e2e6129bdf37dd4a46004e",
+                "responses": {
+                    "200": {
+                        "description": "Delete."
+                    }
+                }
+            }
+        },
+        "/api/dep/add": {
+            "post": {
+                "operationId": "8240b030d2378371038d98a3ded0a55e",
+                "responses": {
+                    "200": {
+                        "description": "Add new department."
+                    }
+                }
+            }
+        }
+    }
+}
