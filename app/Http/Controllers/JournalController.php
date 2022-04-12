@@ -8,10 +8,24 @@ use Illuminate\Support\Facades\Validator;
 
 class JournalController extends Controller
 {
+
+    /**
+     * @OA\Get(
+     *     path="/api/journal/",
+     *     @OA\Response(response="200", description="Display a listing of journals.")
+     * )
+     */
+
     public function journals(){
         return response()->json(Journal::get(), 200);
     }
 
+    /**
+     * @OA\Get(
+     *     path="/api/journal/{id}",
+     *     @OA\Response(response="200", description="Display journal by id.")
+     * )
+     */
     public function journalById($id){
         $journal = Journal::find($id);
         if( is_null($journal))
@@ -20,6 +34,13 @@ class JournalController extends Controller
         }
         return response()->json($journal, 200);
     }
+
+    /**
+     * @OA\Post (
+     *     path="/api/journal/add",
+     *     @OA\Response(response="201", description="Add journal.")
+     * )
+     */
 
     public function journalAdd(Request $request){
         $rules = ['content'=>'required|min:10'];
@@ -32,6 +53,13 @@ class JournalController extends Controller
         return response()->json($journal, 201);
 
     }
+
+    /**
+     * @OA\Put(
+     *     path="/api/journal/{id}",
+     *     @OA\Response(response="200", description="Edit journal.")
+     * )
+     */
 
     public function journalEdit(Request $request ,$id){
         $journal = Journal::find($id);
@@ -48,6 +76,13 @@ class JournalController extends Controller
         $journal->update($request->all());
         return response()->json($journal, 200);
     }
+
+    /**
+     * @OA\Delete (
+     *     path="/api/journal/{id}",
+     *     @OA\Response(response="204", description="Delete journal.")
+     * )
+     */
 
     public function journalDelete($id){
         $journal = Journal::find($id);

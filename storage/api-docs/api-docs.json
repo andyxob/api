@@ -35,7 +35,7 @@
             "delete": {
                 "operationId": "84c294c1a7e2e6129bdf37dd4a46004e",
                 "responses": {
-                    "200": {
+                    "204": {
                         "description": "Delete."
                     }
                 }
@@ -45,8 +45,146 @@
             "post": {
                 "operationId": "8240b030d2378371038d98a3ded0a55e",
                 "responses": {
-                    "200": {
+                    "201": {
                         "description": "Add new department."
+                    }
+                }
+            }
+        },
+        "/api/journal/": {
+            "get": {
+                "operationId": "a3e46bf9e1bd70dd2629356cce60a93d",
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of journals."
+                    }
+                }
+            }
+        },
+        "/api/journal/{id}": {
+            "get": {
+                "operationId": "5d3e5a236892e043ffde73eb7947524c",
+                "responses": {
+                    "200": {
+                        "description": "Display journal by id."
+                    }
+                }
+            },
+            "put": {
+                "operationId": "5257a498fccca833bfea40749422857b",
+                "responses": {
+                    "200": {
+                        "description": "Edit journal."
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "b87cc54f158a3564a9af77003fe8c09f",
+                "responses": {
+                    "204": {
+                        "description": "Delete journal."
+                    }
+                }
+            }
+        },
+        "/api/journal/add": {
+            "post": {
+                "operationId": "0dafc71f534009ae4d1729a694a66dbf",
+                "responses": {
+                    "201": {
+                        "description": "Add journal."
+                    }
+                }
+            }
+        },
+        "/api/shop/": {
+            "get": {
+                "operationId": "ae777eedbc7249cd70dbc5d5c9136c62",
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of shops."
+                    }
+                }
+            }
+        },
+        "/api/shop/{id}": {
+            "get": {
+                "operationId": "73b2a22c15c0af234838ea88c47e79e5",
+                "responses": {
+                    "200": {
+                        "description": "Display shop by id."
+                    }
+                }
+            },
+            "put": {
+                "operationId": "e1a2dbd00bb8b1bb23860ca6a6f2fc09",
+                "responses": {
+                    "200": {
+                        "description": "Edit shop."
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "15ac9522bbed5a3080dbb9157fdf9f6a",
+                "responses": {
+                    "204": {
+                        "description": "Delete."
+                    }
+                }
+            }
+        },
+        "/api/shop/add": {
+            "post": {
+                "operationId": "457109068c16669834cd6579fe49d5cb",
+                "responses": {
+                    "200": {
+                        "description": "Add shop."
+                    }
+                }
+            }
+        },
+        "/api/worker/": {
+            "get": {
+                "operationId": "232f0d51977997969e03439ebd7577a3",
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of workers."
+                    }
+                }
+            }
+        },
+        "/api/worker/{id}": {
+            "get": {
+                "operationId": "d2f27d35341c65822acd18e4c39b516f",
+                "responses": {
+                    "200": {
+                        "description": "Display worker by id."
+                    }
+                }
+            },
+            "put": {
+                "operationId": "dd86e0abea5c1a3ddce031ffeb3d7b8d",
+                "responses": {
+                    "200": {
+                        "description": "Edit worker."
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "2bb53043a12b4c746cd9b133f93ff3a9",
+                "responses": {
+                    "204": {
+                        "description": "Delete worker."
+                    }
+                }
+            }
+        },
+        "/api/worker/add": {
+            "post": {
+                "operationId": "53e25770f365cf234eba5d3d1f970ddb",
+                "responses": {
+                    "201": {
+                        "description": "Add worker."
                     }
                 }
             }

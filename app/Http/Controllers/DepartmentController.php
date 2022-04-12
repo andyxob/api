@@ -41,7 +41,7 @@ class DepartmentController extends Controller
     /**
      * @OA\Post (
      *     path="/api/dep/add",
-     *     @OA\Response(response="200", description="Add new department.")
+     *     @OA\Response(response="201", description="Add new department.")
      * )
      */
     public function depAdd(Request $request){
@@ -83,7 +83,7 @@ class DepartmentController extends Controller
     /**
      * @OA\Delete (
      *     path="/api/dep/{id}",
-     *     @OA\Response(response="200", description="Delete.")
+     *     @OA\Response(response="204", description="Delete.")
      * )
      */
 
