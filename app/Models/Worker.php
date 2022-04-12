@@ -13,8 +13,8 @@ class Worker extends Model
     protected $fillable = [
         'name',
         'surname',
-        'department',
-        'shop',];
+        'shop',
+        'journal'];
 
 
 

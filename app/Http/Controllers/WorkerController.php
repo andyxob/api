@@ -45,7 +45,7 @@ class WorkerController extends Controller
 
     public function workerAdd(Request $request){
         $rules = ['shop'=>'required',
-            'department'=>'required',
+            'journal'=>'required',
             'name'=>'required|min:4|max:25',
             'surname'=>'required|min:4|max:25'];
 

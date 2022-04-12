@@ -13,6 +13,8 @@ class Journal extends Model
 
     protected $fillable = ['content'];
 
+
+
     public function worker(){
         return $this->belongsTo(Worker::class);
 

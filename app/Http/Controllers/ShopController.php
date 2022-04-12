@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Department;
 use App\Models\Shop;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -40,12 +41,15 @@ class ShopController extends Controller
     /**
      * @OA\Post (
      *     path="/api/shop/add",
-     *     @OA\Response(response="200", description="Add shop.")
+     *     @OA\Response(response="201", description="Add shop.")
      * )
      */
 
     public function shopAdd(Request $request){
-        $rules = ['location'=>'required|min:4'];
+        $rules = ['name'=>'required|min:4',
+            'department'=>'required'];
+
+
 
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()){
@@ -67,7 +71,8 @@ class ShopController extends Controller
         {
             return response()->json(['error'=>true, 'message'=>'Not found'], 404);
         }
-        $rules = ['location'=>'required|min:4'];
+        $rules = ['name'=>'required|min:4',
+            'department'=>'required'];
 
         $validator = Validator::make($request->all(), $rules);
         if ($validator->fails()){

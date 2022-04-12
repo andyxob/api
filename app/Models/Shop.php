@@ -11,7 +11,9 @@ class Shop extends Model
 
     protected $table = 'shops';
 
-    protected $fillable = ['location'];
+    protected $fillable = ['name', 'department'];
+
+
 
     public function department(){
         return $this->belongsTo(Department::class);
